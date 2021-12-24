@@ -28,7 +28,7 @@ class _myappState extends State<myapp> {
       child: Center(
         child: Container(
           decoration: BoxDecoration(border: Border.all(color: Colors.black)),
-          child: Switch(
+          child: SwitchListTile(
             value: _svalue,
             onChanged: (value) {
               setState(() {
@@ -39,6 +39,13 @@ class _myappState extends State<myapp> {
             activeColor: Colors.amber,
             inactiveThumbColor: Colors.black,
             inactiveTrackColor: Colors.green,
+            title: Text("title"),
+            subtitle: Text("subtitile"),
+            secondary: Icon(
+              Icons.menu,
+            
+              ),
+            controlAffinity: ListTileControlAffinity.leading,
           ),
         ),
       ),
